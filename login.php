@@ -1,33 +1,25 @@
 <?php
-// Configuración de la base de datos
-$host = "music-lolfredy5-6409.l.aivencloud.com"; // Cambia esto si tu base de datos está en otro servidor
-$usuario = "avnadmin";   // Cambia esto con tu nombre de usuario de la base de datos
-$contraseña = "AVNS_lDWAK6H25vo4OU9IpoH";    // Cambia esto con la contraseña de tu base de datos
-$nombre_bd = "music"; // Nombre de tu base de datos
+// Incluir el archivo de conexión
+include 'conexion.php';
 
-
-try {
-    // Crear conexión PDO
-    $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
-    
-    // Configurar el modo de error de PDO a excepción
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Verificar si el formulario fue enviado
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Verificar si el formulario fue enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verificar que los campos email y password estén definidos en el POST
+    if (isset($_POST['email_login']) && isset($_POST['password_login'])) {
         // Obtener datos del formulario
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        $email = $_POST['email_login'];
+        $password = $_POST['password_login'];
 
         // Preparar consulta SQL para buscar usuario
-        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = :email");
-        $stmt->bindParam(':email', $email);
+        $stmt = $conexion->prepare("SELECT * FROM usuario WHERE email = ?");
+        $stmt->bind_param("s", $email); // 's' indica que estamos pasando una cadena
         $stmt->execute();
+        $result = $stmt->get_result();
 
         // Verificar si se encontró el usuario
-        if ($stmt->rowCount() > 0) {
+        if ($result->num_rows > 0) {
             // Obtener los datos del usuario
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user = $result->fetch_assoc();
 
             // Verificar si la contraseña coincide usando password_verify
             if (password_verify($password, $user['contrasena'])) {
@@ -51,9 +43,11 @@ try {
             header("Location: login.html?error=incorrect");
             exit();
         }
+    } else {
+        // Si no se recibieron los campos email y password
+        echo "Por favor, complete ambos campos.";
     }
-} catch(PDOException $e) {
-    // Manejar errores de conexión
-    echo "Error de conexión: " . $e->getMessage();
+} else {
+    echo "Método de solicitud no válido.";
 }
 ?>
