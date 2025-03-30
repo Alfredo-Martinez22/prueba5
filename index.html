@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Music-Match</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .card-img-top {
+                height: 200px;
+                object-fit: cover;
+            }
+            .card {
+                height: 100%;
+            }
+        </style>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BC1H8BNL30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BC1H8BNL30');
+</script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Music-Match</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog_all.html">Músicos</a></li>
+                    </ul>
+                    <form class="d-flex me-3" action="search.html" method="GET">
+                        <input class="form-control me-2" type="search" name="query" placeholder="Buscar músicos..." aria-label="Search" />
+                        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                    </form>
+                    <a class="btn btn-outline-dark" href="cart.html">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </a>
+                    <div class="d-flex ms-auto">
+                        <a href="register_login.html" class="btn btn-outline-dark">
+                            <i class="bi bi-person-circle me-1"></i>
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Music-Match</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Encuentra talento musical con solo un clic</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <!-- Músico 1 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/dj_party.JPG" alt="DJ Party" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">DJ Party</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $500.00 - $1500.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="1" data-name="DJ Party" data-price="1500">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 2 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/guitar_hero.JPG" alt="Guitar Hero" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Guitar Hero</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span class="text-muted text-decoration-line-through">$800.00</span>
+                                    $500.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="2" data-name="Guitar Hero" data-price="500">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 3 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/animador.jpg" alt="Cantante Eventos-Class" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Cantante Eventos-Class</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span class="text-muted text-decoration-line-through">$1500.00</span>
+                                    $1000.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="3" data-name="Cantante Eventos-Class" data-price="1000">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 4 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/solista_mg.jpg" alt="Solista MagicPlus" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Solista MagicPlus</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $2000.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="4" data-name="Solista MagicPlus" data-price="2000">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 5 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/trio_musical.jpeg" alt="Los Tres Boleros" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Los Tres Boleros</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span class="text-muted text-decoration-line-through">$1200.00</span>
+                                    $900.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="5" data-name="Los Tres Boleros" data-price="900">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 6 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/mariachi.jpg" alt="Mariachi Los Panchos" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Mariachi Los Panchos</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $1100.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="6" data-name="Mariachi Los Panchos" data-price="1100">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 7 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/norteño.jpeg" alt="Colmillo Norteño" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Colmillo Norteño</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $700.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="7" data-name="Colmillo Norteño" data-price="700">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Músico 8 -->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <a href="profile_music.html"><img class="card-img-top" src="assets/images/Violinista.jpeg" alt="Violinista Hassi" /></a>
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Violinista Hassi</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $800.00
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-id="8" data-name="Violinista Hassi" data-price="800">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Music-Match 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
+

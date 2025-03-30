@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros de Busqueda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BC1H8BNL30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BC1H8BNL30');
+</script>
+</head>
+<body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Music-Match</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog_all.html">Músicos</a></li>
+                    </ul>
+                    <form class="d-flex me-3" action="search.html" method="GET">
+                        <input class="form-control me-2" type="search" name="query" placeholder="Buscar músicos..." aria-label="Search" />
+                        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                    </form>
+                    <a class="btn btn-outline-dark" href="cart.html">
+                        <i class="bi-cart-fill me-1"></i>
+                        Carrito
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </a>
+                    <div class="d-flex ms-auto">
+                        <a href="register_login.html" class="btn btn-outline-dark">
+                            <i class="bi bi-person-circle me-1"></i>
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Filtros -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar Filtros -->
+            <div class="col-md-3">
+                <div class="filters">
+                    <h5>Filtrar por:</h5>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="priceRange">Precio máximo:</label>
+                            <select class="form-control" id="priceRange">
+                                <option value="">Cualquier precio</option>
+                                <option value="150">Hasta $150</option>
+                                <option value="200">Hasta $200</option>
+                                <option value="250">Hasta $250</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="type">Tipo:</label>
+                            <select class="form-control" id="type">
+                                <option value="">Cualquier tipo</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Banda">Banda</option>
+                                <option value="Norteñas">Norteñas</option>
+                                <option value="Mariachi">Mariachi</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="rating">Calificación mínima:</label>
+                            <select class="form-control" id="rating">
+                                <option value="">Cualquier calificación</option>
+                                <option value="3">3 estrellas</option>
+                                <option value="4">4 estrellas</option>
+                                <option value="5">5 estrellas</option>
+                            </select>
+                        </div>
+                        <button type="button" id="applyFilters" class="btn btn-primary w-100">Aplicar Filtros</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="col-md-9">
+                <div id="musiciansContainer">
+                    <!-- Categoría Rock -->
+                    <h2>Rock</h2>
+                    <div class="row">
+                        <div class="col-md-4 musician-card" data-price="150" data-type="Rock" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/rockA.jpeg" class="card-img-top" alt="Rock Band A">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Rock Band A</h5>
+                                    <p class="card-text">Una banda de rock enérgica que ofrece un repertorio de clásicos del rock y sus propios temas originales.</p>
+                                    <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="180" data-type="Rock" data-rating="5">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/rockB.jpeg" class="card-img-top" alt="Rock Band B">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Rock Band B</h5>
+                                    <p class="card-text">Banda de rock alternativo conocida por sus melodías pegajosas y letras profundas. Perfectos para cualquier evento.</p>
+                                    <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="200" data-type="Rock" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/rockC.jpeg" class="card-img-top" alt="Rock Band C">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Rock Band C</h5>
+                                    <p class="card-text">Una banda de rock clásico que revive los grandes éxitos de los 70 y 80. Perfectos para fiestas y eventos.</p>
+                                    <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Banda -->
+                    <h2>Banda</h2>
+                    <div class="row">
+                        <div class="col-md-4 musician-card" data-price="150" data-type="Banda" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/bandaA.jpeg" class="card-img-top" alt="Banda A">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Banda A</h5>
+                                    <p class="card-text">Banda de música en vivo que toca música popular y de baile, ideal para fiestas y eventos.</p>
+                                    <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="180" data-type="Banda" data-rating="5">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/bandaB.jpeg" class="card-img-top" alt="Banda B">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Banda B</h5>
+                                    <p class="card-text">Una banda de baile con un amplio repertorio que incluye música de salsa, cumbia y más.</p>
+                                    <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="200" data-type="Banda" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/bandaC.jpeg" class="card-img-top" alt="Banda C">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Banda C</h5>
+                                    <p class="card-text">Banda de música en vivo que mezcla géneros para hacer bailar a todos los asistentes.</p>
+                                    <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Norteñas -->
+                    <h2>Norteñas</h2>
+                    <div class="row">
+                        <div class="col-md-4 musician-card" data-price="150" data-type="Norteñas" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/norteñoA.jpeg" class="card-img-top" alt="Norteñas A">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Norteñas A</h5>
+                                    <p class="card-text">Banda de música norteña con clásicos y temas modernos.</p>
+                                    <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="180" data-type="Norteñas" data-rating="5">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/norteñoB.jpeg" class="card-img-top" alt="Norteñas B">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Norteñas B</h5>
+                                    <p class="card-text">Grupo versátil especializado en música norteña para eventos.</p>
+                                    <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría Mariachi -->
+                    <h2>Mariachi</h2>
+                    <div class="row">
+                        <div class="col-md-4 musician-card" data-price="200" data-type="Mariachi" data-rating="5">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/mariachiA.jpeg" class="card-img-top" alt="Mariachi A">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mariachi A</h5>
+                                    <p class="card-text">Mariachi tradicional para serenatas y eventos.</p>
+                                    <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 musician-card" data-price="220" data-type="Mariachi" data-rating="4">
+                            <div class="card">
+                                <a href="profile_music.html">
+                                    <img src="assets/images/mariachiB.jpeg" class="card-img-top" alt="Mariachi B">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mariachi B</h5>
+                                    <p class="card-text">Grupo de mariachi con amplio repertorio de música ranchera.</p>
+                                    <p class="card-text"><strong>Precio: $220/hora</strong></p>
+                                    <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        document.getElementById("applyFilters").addEventListener("click", function () {
+            const price = document.getElementById("priceRange").value; // Precio máximo seleccionado
+            const type = document.getElementById("type").value; // Categoría seleccionada
+            const rating = document.getElementById("rating").value; // Calificación mínima seleccionada
+    
+            const musicians = document.querySelectorAll(".musician-card");
+    
+            // Itera sobre todas las tarjetas de músicos y aplica filtros
+            musicians.forEach(musician => {
+                const musicianPrice = parseInt(musician.getAttribute("data-price"));
+                const musicianType = musician.getAttribute("data-type");
+                const musicianRating = parseInt(musician.getAttribute("data-rating"));
+    
+                // Comprueba si la tarjeta cumple con los filtros seleccionados
+                const matchesPrice = !price || musicianPrice <= parseInt(price);
+                const matchesType = !type || musicianType === type;
+                const matchesRating = !rating || musicianRating >= parseInt(rating);
+    
+                // Muestra u oculta la tarjeta según los filtros
+                if (matchesPrice && matchesType && matchesRating) {
+                    musician.style.display = "block";
+                } else {
+                    musician.style.display = "none";
+                }
+            });
+    
+            // Comprueba si hay tarjetas visibles para cada categoría
+            const categories = document.querySelectorAll("h2"); // Encabezados de categoría (como "Rock", "Banda")
+            categories.forEach(category => {
+                const categoryType = category.innerText.trim(); // Obtiene el nombre de la categoría (Rock, Banda, etc.)
+                const cardsInCategory = Array.from(
+                    document.querySelectorAll(`.musician-card[data-type="${categoryType}"]`)
+                );
+    
+                const hasVisibleCards = cardsInCategory.some(card => card.style.display === "block");
+    
+                // Muestra/oculta el encabezado según si hay músicos visibles en esa categoría
+                if (hasVisibleCards) {
+                    category.style.display = "block"; // Muestra el título de la categoría
+                } else {
+                    category.style.display = "none"; // Oculta el título si no hay músicos visibles
+                }
+            });
+        });
+    </script>    
+</body>
+
+<!-- Footer-->
+<footer class="bg-dark text-white py-3">
+    <div class="container-fluid">
+        <div class="text-center">
+            &copy; 2024 Music-Match. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+
+</html>

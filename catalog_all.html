@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Músicos</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BC1H8BNL30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BC1H8BNL30');
+</script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Music-Match</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog_all.html">Músicos</a></li>
+                </ul>
+                <form class="d-flex me-3" action="search.html" method="GET">
+                    <input class="form-control me-2" type="search" name="query" placeholder="Buscar músicos..."
+                        aria-label="Search" />
+                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                </form>
+                <a class="btn btn-outline-dark" href="cart.html">
+                    <i class="bi bi-cart-fill me-1"></i>
+                    Carrito
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </a>
+                <div class="d-flex ms-auto">
+                    <a href="register_login.html" class="btn btn-outline-dark">
+                        <i class="bi bi-person-circle me-1"></i>
+                        Iniciar sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Catálogo de Músicos</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <!-- Categoría Rock -->
+        <h2>Rock</h2>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/rockA.jpeg" class="card-img-top" alt="Rock Band A">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Rock Band A</h5>
+                        <p class="card-text">Una banda de rock enérgica que ofrece un repertorio de clásicos del rock y sus propios temas originales.</p>
+                        <br>
+                        <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/rockB.jpeg" class="card-img-top" alt="Rock Band B">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Rock Band B</h5>
+                        <p class="card-text">Banda de rock alternativo conocida por sus melodías pegajosas y letras profundas. Perfectos para cualquier evento.</p>
+                        <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/rockC.jpeg" class="card-img-top" alt="Rock Band C">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Rock Band C</h5>
+                        <p class="card-text">Una banda de rock clásico que revive los grandes éxitos de los 70 y 80. Perfectos para fiestas y eventos.</p>
+                        <br>
+                        <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <!-- Categoría Rock -->
+        <h2>Banda</h2>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/bandaA.jpeg" class="card-img-top" alt="Banda A">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Banda A</h5>
+                        <p class="card-text">Banda de música en vivo que toca música popular y de baile, ideal para
+                            fiestas y eventos.</p>
+                            <br>
+                        <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/bandaB.jpeg" class="card-img-top" alt="Rock Band B">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Banda B</h5>
+                        <p class="card-text">Una banda de baile con un amplio repertorio que incluye música de salsa,
+                            cumbia y más. Perfectos para eventos familiares.</p>
+                        <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/bandaC.jpeg" class="card-img-top" alt="Rock Band C">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Banda C</h5>
+                        <p class="card-text">Banda de música en vivo que mezcla géneros para hacer bailar a todos los
+                            asistentes. ¡Un éxito garantizado!</p>
+                        <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- Puedes repetir el mismo formato para otras categorías como Banda, Norteñas, Mariachi, etc., solo cambiando las imágenes y textos. -->
+        <!-- Categoría Norteñas -->
+        <h2>Norteñas</h2>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/norteñoA.jpeg" class="card-img-top" alt="Norteño A">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Norteño A</h5>
+                        <p class="card-text">Grupo norteño que ofrece un espectáculo lleno de energía y música
+                            tradicional. ¡Perfecto para fiestas mexicanas!</p>
+                        <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/norteñoB.jpeg" class="card-img-top" alt="Norteño B">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Norteño B</h5>
+                        <p class="card-text">Famoso grupo norteño con éxitos populares y un amplio repertorio. Ideal
+                            para eventos al aire libre.</p>
+                            <br>
+                        <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/norteñoC.jpeg" class="card-img-top" alt="Norteño C">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Norteño C</h5>
+                        <p class="card-text">Grupo norteño tradicional que ofrece un show espectacular con los mejores
+                            corridos y canciones del norte.</p>
+                        <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- Categoría Regional Mexicano -->
+        <h2>Regional Mexicano</h2>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/regionalA.jpeg" class="card-img-top" alt="Regional A">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Regional A</h5>
+                        <p class="card-text">Conjunto musical que interpreta los grandes éxitos del regional mexicano.
+                            Perfectos para bodas y eventos familiares.</p>
+                        <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/regionalB.jpeg" class="card-img-top" alt="Regional B">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Regional B</h5>
+                        <p class="card-text">Grupo famoso por sus interpretaciones de música tradicional y contemporánea
+                            del norte de México.</p>
+                            <br>
+                        <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/regionalC.jpeg" class="card-img-top" alt="Regional C">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Regional C</h5>
+                        <p class="card-text">Este grupo deleitará a tus invitados con sus emocionantes interpretaciones
+                            de música regional mexicana.</p>
+                        <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- Categoría Mariachi-->
+        <h2>Mariachi</h2>
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/mariachiA.jpeg" class="card-img-top" alt="Mariachi A">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Mariachi A</h5>
+                        <p class="card-text">Un encantador grupo de mariachi que tocará todos tus clásicos favoritos
+                            para animar cualquier evento.</p>
+                        <p class="card-text"><strong>Precio: $150/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/MariachiB.jpeg" class="card-img-top" alt="Mariachi B">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Mariachi B</h5>
+                        <p class="card-text">Mariachi tradicional con un repertorio que abarca desde la música clásica
+                            hasta los éxitos contemporáneos.</p>
+                        <p class="card-text"><strong>Precio: $180/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 musician-card">
+                <div class="card h-100">
+                    <a href="profile_music.html">
+                        <img src="assets/images/mariachiCjpeg.jpeg" class="card-img-top" alt="Mariachi C">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Mariachi C</h5>
+                        <p class="card-text">Grupo de mariachi versátil que hará de tu evento una experiencia
+                            inolvidable con su música vibrante.</p>
+                        <p class="card-text"><strong>Precio: $200/hora</strong></p>
+                        <a href="profile_music.html" class="btn btn-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>Copyright &copy; Music-Match 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
