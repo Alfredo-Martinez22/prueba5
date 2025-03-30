@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insertar los datos en la base de datos
-    $query = "INSERT INTO usuarios (nombre, email, telefono, pais, estado, ciudad, tipo_usuario, contrasena, fecha_registro)
+    $query = "INSERT INTO usuario (nombre, email, telefono, pais, estado, ciudad, tipo_usuario, contrasena, fecha_registro)
               VALUES ('$nombre', '$email', '$telefono', '$pais', '$estado', '$ciudad', '$tipo_usuario', '$hashedPassword', NOW())";
     
     // Ejecutar la consulta
